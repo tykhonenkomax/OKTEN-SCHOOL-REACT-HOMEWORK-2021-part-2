@@ -7,11 +7,24 @@ body{
     background-color: cadetblue;
     text-align: center;
     font-family: "Comic Sans MS";
+    border-radius: 8px;
+    border: solid 2px whitesmoke;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .flexStyle{
-    display: flex;
-    justify-content: center;
+display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
+
+}
+.generalName{
+    text-align: center;
+    font-family: "Comic Sans MS";
+    font-size: 50px;
+}
+.imgStyle{
+    margin-top: 10px;
 }

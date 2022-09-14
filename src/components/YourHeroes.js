@@ -15,9 +15,9 @@ const YourHeroes = () => {
 
 
   return (
-      <div>
+      <div className='flexStyle'>
         {
-          characters.map(characters => <YourHero key={characters.id} characters={characters} />)
+          characters.map(characters => <YourHero key={characters.id} characters={characters}/>)
         }
       </div>
   );

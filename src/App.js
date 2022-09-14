@@ -6,6 +6,7 @@ function App() {
   return (
       <>
         <div>
+          <div className='generalName'>The Rick and Morty API</div>
           <YourHeroes/>
         </div>
 
