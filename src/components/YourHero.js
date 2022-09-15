@@ -12,7 +12,7 @@ const YourHero = ({characters}) => {
           Species: {species} <br/>
           Gender: {gender} <br/>
           location: {location.name}
-          image: {<img className='imgStyle' src={image} alt=""/>}
+          image: {<img className='imgStyle' src={image} alt={name}/>}
         </div>
       </div>
 

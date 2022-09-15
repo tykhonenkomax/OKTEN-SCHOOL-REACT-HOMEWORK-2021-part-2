@@ -2,15 +2,17 @@ import React, {useEffect, useState} from 'react';
 import {YourHero} from "./YourHero";
 
 
-const YourHeroes = () => {
+const YourHeroes = (props) => {
+
+  const {search} = props;
+  console.log(props)
 
   const [characters, setCharacters] = useState([])
-
   useEffect(() => {
 
-    fetch('https://rickandmortyapi.com/api/character')
+    fetch(`https://rickandmortyapi.com/api/character/?page=${search.value}`)
         .then(value => value.json())
-        .then((data) => setCharacters(data.results))
+        .then((data) => setCharacters(data.results.slice(0, 6)))
   }, [])
 
 
@@ -23,4 +25,4 @@ const YourHeroes = () => {
   );
 };
 
-export  {YourHeroes};
+export {YourHeroes};
