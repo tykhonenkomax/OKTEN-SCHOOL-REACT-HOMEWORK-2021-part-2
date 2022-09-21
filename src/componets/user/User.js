@@ -1,15 +1,17 @@
 import React from 'react';
+import {Comments} from "../comments/Comments";
 
 const User = ({user}) => {
 
   const {name, username} = user;
 
   return (
-
+<div>
       <div>
-        <div>name: {name}</div>
-        <div>username: {username}</div>
+        <h2>name: {name}</h2>
+        <h2>username: {username}</h2>
       </div>
+</div>
   );
 };
 

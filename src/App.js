@@ -1,5 +1,5 @@
 import './App.css';
-import {Users} from "./componets";
+import {CarForm, UserForm, Users} from "./componets";
 import {Comments} from "./componets";
 
 
@@ -7,9 +7,11 @@ function App() {
 
   return (
       <div>
-        <Users/>
+        <UserForm/>
         <hr/>
         <hr/>
+        <CarForm/>
+        <br/>
         <Comments/>
       </div>
   );
