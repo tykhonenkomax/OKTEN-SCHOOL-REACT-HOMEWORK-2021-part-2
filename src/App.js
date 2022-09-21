@@ -1,12 +1,16 @@
 import './App.css';
-import {useState} from "react";
+import {Users} from "./componets";
+import {Comments} from "./componets";
 
 
 function App() {
 
   return (
       <div>
-App
+        <Users/>
+        <hr/>
+        <hr/>
+        <Comments/>
       </div>
   );
 }
