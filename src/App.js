@@ -1,12 +1,13 @@
 import './App.css';
-import {useState} from "react";
+import {Cars} from "./components";
+
 
 
 function App() {
 
   return (
       <div>
-App
+<Cars/>
       </div>
   );
 }
