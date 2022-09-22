@@ -3,6 +3,6 @@ import {baseURL} from "../configs";
 
 const axiosServices = axios.create({baseURL});
 
-export{
+export {
   axiosServices
 }

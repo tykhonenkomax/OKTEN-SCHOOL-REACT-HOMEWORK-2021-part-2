@@ -1,6 +1,4 @@
-import './App.css';
-import {CarForm, UserForm, Users} from "./componets";
-import {Comments} from "./componets";
+import {CommentForm, UserForm} from "./componets";
 
 
 function App() {
@@ -10,9 +8,7 @@ function App() {
         <UserForm/>
         <hr/>
         <hr/>
-        <CarForm/>
-        <br/>
-        <Comments/>
+        <CommentForm/>
       </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Comment = ({comment}) => {
 
-  const{name, email}=comment
+  const {name, email} = comment
   return (
       <div>
         <div>name: {name}</div>
@@ -12,4 +12,4 @@ const Comment = ({comment}) => {
   );
 };
 
-export  {Comment};
+export {Comment};
