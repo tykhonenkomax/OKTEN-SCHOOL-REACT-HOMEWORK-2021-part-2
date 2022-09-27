@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Link, Outlet} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 const Comment = ({comment}) => {
@@ -9,10 +9,9 @@ const Comment = ({comment}) => {
       <div>
 
         <div>
-          <Link to={`posts/${comment.id}`}> comment: {comment.name}</Link>
+          {comment.id} -- {comment.email}
+         <span><Link to={comment.postId.toString()}> comment: {comment.name} </Link></span>
         </div>
-
-        <div><Outlet/></div>
       </div>
 
 

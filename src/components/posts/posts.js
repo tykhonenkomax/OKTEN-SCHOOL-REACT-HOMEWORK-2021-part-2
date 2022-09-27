@@ -2,23 +2,30 @@ import React, {useEffect, useState} from 'react';
 
 import {postsServices} from "../../services/posts.axios.services";
 import {Post} from "../post/post";
+import {useParams} from "react-router-dom";
+
 
 const Posts = () => {
 
-  const [posts, setPosts] = useState([])
+  const {postId} = useParams()
+
+
+  const [post, setPost] = useState(null)
+
+
 
   useEffect(() => {
-    postsServices.getAll().then(({data}) => setPosts(data))
-  }, [])
+    postsServices.getByID(postId).then(({data})=>setPost(data))
+  }, [postId])
+
+
 
   return (
 
       <div>
         {
-          posts.map(post => <Post key={post.id} post={post}/>)
+          post && (<Post post={post}/> )
         }
-
-
       </div>
 
   );

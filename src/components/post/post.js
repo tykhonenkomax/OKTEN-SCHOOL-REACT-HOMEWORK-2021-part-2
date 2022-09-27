@@ -1,12 +1,15 @@
 import React from 'react';
 
+
 const Post = ({post}) => {
 
   return (
 
-      <div>
+      <h1>
         title: {post.title}
-      </div>
+        <hr/>
+      </h1>
+
 
   );
 };

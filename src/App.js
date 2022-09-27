@@ -1,5 +1,6 @@
 import './App.css';
 import {Link, Route, Routes} from "react-router-dom";
+
 import {Albums, Comments, Posts, Todos} from "./components";
 
 
@@ -14,11 +15,14 @@ function App() {
         </div>
         <hr/>
         <Routes>
-          <Route  path={'albums'} element={<Albums/>}/>
+
+          <Route path={'albums'} element={<Albums/>}/>
           <Route path={'todos'} element={<Todos/>}/>
+
           <Route path={'comments'} element={<Comments/>}>
-            <Route path={'posts/:id'} element={<Posts/>}></Route>
+            <Route path={':postId'} element={<Posts/>}/>
           </Route>
+
         </Routes>
       </div>
   );
