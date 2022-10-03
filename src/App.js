@@ -1,12 +1,14 @@
 import './App.css';
-import {useState} from "react";
+import {Count1, Count2} from "./componets";
 
 
 function App() {
 
   return (
       <div>
-App
+        <Count1/>
+        <hr/>
+        <Count2/>
       </div>
   );
 }
