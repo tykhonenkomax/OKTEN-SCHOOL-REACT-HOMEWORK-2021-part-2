@@ -1,12 +1,22 @@
+import React from "react";
+
 import './App.css';
-import {useState} from "react";
+
+import {Header, Posts, Users} from "./components";
+import {Components} from "./components/Comments";
 
 
 function App() {
 
   return (
       <div>
-App
+        <Header/>
+        <hr/>
+        <div>
+          <Users/>
+          <Posts/>
+          <Components/>
+        </div>
       </div>
   );
 }
