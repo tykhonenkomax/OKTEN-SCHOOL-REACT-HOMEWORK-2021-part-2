@@ -3,7 +3,7 @@ import React from "react";
 import './App.css';
 
 import {Header, Posts, Users} from "./components";
-import {Components} from "./components/Comments";
+import {Comments} from "./components/Comments";
 
 
 function App() {
@@ -12,10 +12,12 @@ function App() {
       <div>
         <Header/>
         <hr/>
-        <div className='headerStyle'>
+        <div>
           <Users/>
+          <hr/>
           <Posts/>
-          <Components/>
+          <hr/>
+          <Comments/>
         </div>
         <hr/>
       </div>

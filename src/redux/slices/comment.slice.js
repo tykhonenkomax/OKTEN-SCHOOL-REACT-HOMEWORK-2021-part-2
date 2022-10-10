@@ -13,14 +13,18 @@ const commentSlice = createSlice({
   reducers: {
     getAll: (state, action) => {
       state.comment = action.payload
+    },
+    getCurrentPost:(state, action)=>{
+      state.comment=action.payload
     }
   }
 });
 
-const {reducer: commentReducer, actions: {getAll}} = commentSlice;
+const {reducer: commentReducer, actions: {getAll,getCurrentPost}} = commentSlice;
 
 const commentAction = {
-  getAll
+  getAll,
+  getCurrentPost
 }
 export {
   commentReducer,

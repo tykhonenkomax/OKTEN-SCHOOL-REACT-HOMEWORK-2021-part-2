@@ -8,7 +8,7 @@ import {User} from "../User";
 const Users = () => {
 
   const dispatch = useDispatch();
-  const {users} = useSelector(state => state.useReducer);
+  const {users} = useSelector(state => state.userReducer);
 
   useEffect(() => {
     userAxiosServices.getAll().then(({data}) => dispatch(userAction.getAll(data)))

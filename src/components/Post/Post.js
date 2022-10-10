@@ -1,14 +1,20 @@
 import React from 'react';
+import {useDispatch} from "react-redux";
+import {postAction} from "../../redux";
 
- export const {Post} = () => {
-
+const Post = ({post}) => {
+const dispatch = useDispatch();
 
   return (
 
       <div>
-        Post
+        title:{post.title}
+        <button onClick={()=>dispatch(postAction.getCurrentPost(post))}>select</button>
       </div>
 
   );
 };
 
+export {
+  Post
+}
