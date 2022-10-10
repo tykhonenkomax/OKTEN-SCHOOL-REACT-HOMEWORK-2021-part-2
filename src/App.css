@@ -1,0 +1,16 @@
+.headerStyle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: black;
+    height: 80px;
+    color: snow;
+    font-family: "Euphemia UCAS", serif;
+    font-size: 25px;
+    cursor: pointer;
+}
+.headerStyle a{
+    text-decoration: none;
+
+
+}

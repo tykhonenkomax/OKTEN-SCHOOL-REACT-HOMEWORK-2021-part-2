@@ -7,7 +7,7 @@ let initialState = {
   error: null
 };
 const postSlice = createSlice({
-  name: postSlice,
+  name: 'postSlice',
   initialState,
   reducers: {
     getAll: (state, action) => {
@@ -16,13 +16,13 @@ const postSlice = createSlice({
   }
 });
 
-const {reducer:userReducer,actions:{getAll}} =postSlice;
+const {reducer:postReducer,actions:{getAll}} =postSlice;
 
-const userAction={
+const postAction={
   getAll
 }
 
 export {
-    userReducer,
-    userAction
+    postReducer,
+    postAction
 }

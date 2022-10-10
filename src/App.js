@@ -12,11 +12,12 @@ function App() {
       <div>
         <Header/>
         <hr/>
-        <div>
+        <div className='headerStyle'>
           <Users/>
           <Posts/>
           <Components/>
         </div>
+        <hr/>
       </div>
   );
 }

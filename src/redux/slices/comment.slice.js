@@ -8,7 +8,7 @@ let initialState = {
 
 };
 const commentSlice = createSlice({
-  name: commentSlice,
+  name: 'commentSlice',
   initialState,
   reducers: {
     getAll: (state, action) => {
