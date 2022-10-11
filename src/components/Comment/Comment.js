@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {useDispatch} from "react-redux";
 import {commentAction} from "../../redux";
 
@@ -10,7 +11,7 @@ const dispatch = useDispatch();
 <div>
       <div>
        email: {comment.email}
-        <button onClick={()=>dispatch(commentAction.getCurrentPost(comment))}>select</button>
+        <button onClick={()=>dispatch(commentAction.getCurrentComment(comment))}>select</button>
       </div>
 </div>
 

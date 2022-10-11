@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 
 import {useDispatch, useSelector} from "react-redux";
 import {postAction} from "../../redux";
-import {postAxiosServices} from "../../services";
 import {Post} from "../Post";
 
 const Posts = () => {
@@ -11,7 +10,8 @@ const Posts = () => {
   const {posts} = useSelector(state => state.postReducer);
 
   useEffect(() => {
-    postAxiosServices.getAll().then(({data}) => dispatch(postAction.getAll(data)))
+    // postAxiosServices.getAll().then(({data}) => dispatch(postAction.getAll(data)))
+    dispatch(postAction.getAll())
   }, [])
 
   return (

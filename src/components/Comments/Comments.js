@@ -5,16 +5,19 @@ import {commentAction} from "../../redux";
 import {Comment} from "../Comment";
 
 const Comments = () => {
-const dispatch = useDispatch();
-const {comment} = useSelector(sate=>sate.commentReducer);
-useEffect(()=>{
-  commentAxiosServices.getAll().then(({data})=>dispatch(commentAction.getAll(data)))
-},[])
+
+  const dispatch = useDispatch();
+  const {comment} = useSelector(sate => sate.commentReducer);
+
+  useEffect(() => {
+    // commentAxiosServices.getAll().then(({data}) => dispatch(commentAction.getAll(data)))
+    dispatch(commentAction.getAll())
+  }, [])
   return (
 
       <div>
         {
-          comment.map(comment=><Comment key={comment.id} comment={comment}/>)
+          comment.map(comment => <Comment key={comment.id} comment={comment}/>)
         }
       </div>
 
