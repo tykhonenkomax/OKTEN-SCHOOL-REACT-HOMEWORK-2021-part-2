@@ -1,4 +1,13 @@
 .Car{
     border: solid 1px;
     margin: 10px;
+    width: 200px;
+}
+.flexStyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flexStyle button{
+    margin-left: 20px;
 }
