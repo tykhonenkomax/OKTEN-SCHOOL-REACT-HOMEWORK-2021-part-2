@@ -2,21 +2,24 @@ import {useForm} from "react-hook-form";
 import {joiResolver} from '@hookform/resolvers/joi';
 import {carValidator} from "../../validators";
 import {carServices} from "../../services";
+import {useDispatch} from "react-redux";
 
 
-const CarForm = ({setCars}) => {
+const CarForm = () => {
   const {register, handleSubmit, reset, formState: {errors, isValid}, setValue} = useForm({
     // resolver: joiResolver(carValidator),
     mode: 'all'
   });
 
-  const submit = async (car) => {
-    const {data} = await carServices.createCar(car);
-    setCars(cars => [...cars, data])
-    reset()
-    console.log(car)
-  };
+  // const submit = async (car) => {
+  //   const {data} = await carServices.createCar(car);
+  //   setCars(cars => [...cars, data])
+  //   reset()
+  //   console.log(car)
+  // };
 
+
+  let submit;
   return (
       <form onSubmit={handleSubmit(submit)}>
         <input type="text" placeholder={'model'} {...register('model')}/>
